@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The TBF</title>
+  {{!-- <link rel="stylesheet" href="public\style.css"
+  <link rel="stylesheet" href="public\css\jass.css"> --}}
+</head>
+
+<body>
+  <header class="display-flex justify-space-between p-2">
+    <h1>
+     Tech Blog Frog
+    </h1>
+    <nav>
+     
+    <a href="/">Home</a>
+    {{#if logged_in}}
+    <a href="/dashboard">Dashboard</a>
+    {{else}}
+    <a href="/login">Dashboard</a>
+    {{/if}}
+    {{#if logged_in}}
+    <button id="logout" class="btn-no-style">Logout</button>
+    {{else}}
+    <a href="/login">Login</a>
+    {{/if}}
+  </nav>
+  </header>
+  <main class="container container-fluid mt-5">
+    {{{ body }}}
+  </main>
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>
