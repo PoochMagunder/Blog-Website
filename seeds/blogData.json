@@ -1,14 +1,17 @@
 [
     {
       "title": "Test 1",
+      "date_created": "Jan/3/2020",
       "content": "This new tech is amazing!"
     },
     {
       "title": "Test 2",
+      "date_created": "Oct/5/2021", 
       "content": "I just tried this new tech!"
     },
     {
       "title": "Test 3",
+      "date_created": "Jan/10/2023",
       "content": "Would not recommend this new tech."
     }
   ]

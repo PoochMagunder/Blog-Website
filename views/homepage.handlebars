@@ -1,9 +1,9 @@
-<div>
-  <h1>Homepage</h1>
-</div>
 {{#each posts as |post|}}
 <div>
-  {{title}}
-  {{date.created}}
+  <h2>{{post.title}} Created On:{{post.date.created}}</h2>
+  <p>{{post.content}}</p>
 </div>
 {{/each}}
+<div>
+  <button id="new-post-home" class="btn-no-style" href="/dashboard">New Post</button>
+</div>
