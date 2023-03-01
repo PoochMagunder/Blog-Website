@@ -16,4 +16,4 @@ To view the webpage follow the provided link.
 
 ## License
 
-
+Refer to the LICENSE in the repo.
