@@ -15,5 +15,3 @@ To use this webpage first you must signup. Once logged in you will have access t
 To view the webpage follow the provided link.
 
 ## License
-
-Refer to the LICENSE in the repo.
