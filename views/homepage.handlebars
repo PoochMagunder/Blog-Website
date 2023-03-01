@@ -1,9 +1,10 @@
 {{#each posts as |post|}}
 <div>
-  <h2>{{post.title}} Created On:{{post.date.created}}</h2>
-  <p>{{post.content}}</p>
+  <h2><a href="/post/{{post.id}}">{{post.title}} Created On:{{format_date post.date_created}}</a></h2>
 </div>
 {{/each}}
+{{#if logged_in}}
 <div>
-  <button id="new-post-home" class="btn-no-style" href="/dashboard">New Post</button>
+  <button href="/dashboard" id="new-post-home" class="btn-no-style">New Post</button>
 </div>
+{{/if}}

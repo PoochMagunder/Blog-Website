@@ -12,8 +12,8 @@
   <header class="display-flex justify-space-between align-left">
     <nav>
      <a href="/">Home</a>
-    {{#if logged_in}}
     <a href="/dashboard">Dashboard</a>
+    {{#if logged_in}}
     {{else}}
     <a href="/login">Dashboard</a>
     {{/if}}

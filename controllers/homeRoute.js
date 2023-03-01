@@ -24,6 +24,28 @@ res.render('homepage', {
   }
 });  
 
+router.get('/post/:id', withAuth, async (req, res) => {
+  try {
+    const postData = await BlogPost.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: {include:['username']},
+        },
+      ],
+    });
+
+    const post = postData.get({ plain: true });
+
+    res.render('blogpost', {
+      ...post,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.get('/dashboard', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
@@ -34,7 +56,6 @@ router.get('/dashboard', withAuth, async (req, res) => {
       attributes: {exclude:['password']},
       include: { model: BlogPost },
     });
-    console.log(userData)
     const users = userData.get({ plain: true });
    
     res.render('dashboard', {
